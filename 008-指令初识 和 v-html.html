@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Vue会根据不同的{指令}，针对标签实现不同的功能{功能} 。
+  指令：带有V-前缀的特殊标签属性-->
+
+  <!-- v-html
+  作用：设置元素的innerHTML
+  语法：V-html="表达式" -->
+  <div id="app">
+    {{nickname}}
+    <br>
+    {{msg}}
+    <!-- 动态解析标签 -->
+    <div v-html="msg"></div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <script>
+    //访问数据 "实例.属性名"
+    //修改数据 "实例.属性名"="值"
+  </script>
+
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        nickname: '疾旋鼬',
+        msg: `<a href="http://www.itheima.com">黑马程序员</a>`
+
+
+      }
+    })
+  </script>
+</body>
+
+</html>
